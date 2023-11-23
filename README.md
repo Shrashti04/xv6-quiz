@@ -95,7 +95,8 @@ Welcome to the XV Quiz for CSL 3030 - Operating Systems!
 13. Describe the structure of the file system in XV6. Include the key components and their roles.
 
 #### Question 14: System Calls vs. Library Functions
-14. Explain the difference between system calls and library functions in the context of XV6. Provide examples of each.
+14. 
+
 
 #### Question 15: Memory Paging
 15. How does memory paging work in XV6? Discuss the benefits of using paging in memory management.
@@ -117,3 +118,39 @@ Welcome to the XV Quiz for CSL 3030 - Operating Systems!
 
 ## Answers
 Please write your answers here
+Answer 1: b. A Unix-like operating system
+Answer 2: c. BSD
+Answer 3: d. simple
+Answer 4: b. As interrupts
+Answer 5: a. 128
+Answer 6: c. Sh
+Answer 7: a. Round-robin scheduling
+Answer 8: a. Paging
+Answer 9: d. Both b and c
+Answer 10: b. No
+Answer 11: c. MIT
+
+Answer 12: The different states a process can be in within the XV6 operating system are: UNUSED,EMBRYO,SLEEPING,RUNNABLE,RUNNING,ZOMBIE
+1) UNUSED: This state represents the creation of a process that is not being utilized at the moment. The process may just be waiting to be initialized, terminated but not cleaned up.
+2) EMBRYO: The initializing of the state occurs when a process is being initiated. It's in the early stages of its life cycle.
+3) SLEEPING: An ongoing process in the SLEEPING state, waits for an event to happen before continuing with its execution. This event could be the completion of a system call or the arrival of a specific signal.
+4) RUNNABLE: The RUNNABLE state refers to a process that is ready to run, but needs to be assigned the CPU. It is in the queue of processes that are prepared to run and is just waiting for its turn.
+5) RUNNING: The CPU is in the execution of the process. In each instance, a solo-core system has one and only one activity in the RUN mode.
+6)ZOMBIE: It is the last stage of a shutdown process that had successfully ended, but was not officially erased from the processes table. The process stays in the ZOMBIE state until its parent obtains its exit status, after which it is completely killed off and expunged from the processes dictionary.
+
+Answer 13: 
+
+Answer 14: System calls are a way for user programs to request services from the operating system, while library functions are a way for user programs to request services from the C library. System calls are typically used for tasks that require direct interaction with the operating system, such as process management, memory management, and file I/O. 
+While Library functions are used for tasks that can be performed independently of the operating system, such as mathematical operations, string manipulation, and memory allocation. In XV6, system calls are implemented as functions in the C standard library.
+
+Answer 15: Memory paging in XV6 is a memory management technique that divides memory into fixed-size frames. When a process requires memory, it requests a frame from the operating system. If the process needs more memory than the available frames, the operating system will page out a process to disk, making space for the new memory request. This process is known as demand paging. 
+The benefits of memory paging in memory management include improved memory utilization, as processes only access the memory they need, and reduced fragmentation, as memory is allocated and freed dynamically.
+
+Answer 16: Three essential shell commands in the XV6 operating system.
+    cd: Change directory
+    ls: List files and directories
+    pwd: Print current directory
+
+Answer 17: Process synchronization in XV6 is essential to ensure that multiple processes can safely share resources and avoid conflicts. One common mechanism used for process synchronization in XV6 is the use of semaphores. Semaphores are a binary mutex that can be used to protect shared resources. A process must acquire the semaphore before accessing the shared resource and release the semaphore when it is done. This ensures that only one process can access the shared resource at a time, preventing conflicts and ensuring safe concurrent access.
+
+Answer 18: 
